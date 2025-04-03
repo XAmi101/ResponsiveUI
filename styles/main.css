@@ -30,21 +30,34 @@ nav{
     display:flex;
     justify-content: space-between;
 }
+
+.responExample{
+    display: none;  /* by default this will not show but can be changed in tablet or mobile view*/
+}
 .headImg{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
 }
+
 /* About styles */
 .grid1{
     display: flex;
     flex-direction: row;
 }
+
+.grid1 div{
+    width: 50%;
+}
 .grid2{
     display: flex;
     flex-direction: row;
 }
+.grid2 div{
+    width: 50%;
+}
+
 /* Menu Styles */
 #Menu{
     background-color: #fdcf3f;
@@ -57,21 +70,66 @@ nav{
 /* Footer Styles */
 
 
-.grid3{
+.grid3, .grid4, .grid5{
     display: flex;
     flex-direction: row;
 }
-.grid4{
+.grid3 div, .grid4 div, .grid5 div{
+    width: 50%
+}
+/* .grid4{
     display: flex;
     flex-direction: row;
 }
 .grid5{
     display: flex;
     flex-direction: row;
-}
+} */
 
 /* .text{
     display: flex;
     justify-content: space-between;
     
 } */
+
+
+
+/* Responsive styles*/
+
+/*tablet media query*/
+@media screen and (max-width: 880px) {
+
+ /*general styles */
+
+    body{
+     background-color: green;
+    }
+ /* header */
+    .top{
+     display: none;  /*  this will not show but can be changed in tablet view but does in default view and now ".responExample" will show    */
+    }
+    .responExample{
+        display:block;
+    } /*COMEBACKTO*/
+ /* About */
+ /* Menu */
+ /* Footer */
+
+} 
+
+
+/*mobile */
+@media screen and (max-width: 550px) {
+
+ /*general styles */
+
+    body{
+        background-color: blue;
+    
+    }
+ /* header */
+
+ /* About */
+ /* Menu */
+ /* Footer */
+} 
