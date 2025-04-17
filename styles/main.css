@@ -1,81 +1,96 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    border: 1px solid gray;
-} /* Reset borders */
+html {
+  font-size: 62.5%;
+  /* resetting the root (HTML) font to 62.5%, 62.5% is equal to 10px in most browsers, so it makes it easier to calculate REM units. 1rem=10px */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 1px solid gray;
+  max-width: 100%; /*this will stop the horizontal scroll bar when you try to size down to smaller screens */
+}
+Reset borders  -removes default browser margin and padding styles
 
 /* gen styles */
- body{
-    line-height: 1.5 ;
- }
- h3{
-    text-transform: uppercase;
-    font-size: 20px
- }
- h4{
-    text-transform: uppercase;
- }
- a{
-    text-decoration: none;
- }
- section{
-    padding: 4% 0;
- }
-/* Header section styles */
-header{
-    background-color: #6bcaab;
+body {
+  line-height: 1.5rem;
+  width: 80%;
+  /*margin: 0 auto;*/ /*apply 0 margin to the top and bottom and automatically make it equal on the left and right*/
 }
-nav{
-    display:flex;
-    justify-content: space-between;
+img {
+  max-width: 100%; /*tells the element you can never be bigger than your parent - */
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+h4 {
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 4% 0;
+}
+/* Header section styles */
+header {
+  background-color: #6bcaab;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-.responExample{
-    display: none;  /* by default this will not show but can be changed in tablet or mobile view*/
+.responExample {
+  display: none; /* by default this will not show but can be changed in tablet or mobile view*/
 }
-.headImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+.headImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /*takes a certain % of the viewing hieght of the screen, like to use this for header images*/
 }
 
 /* About styles */
-.grid1{
-    display: flex;
-    flex-direction: row;
+.grid1 {
+  display: flex;
+  flex-direction: row;
 }
 
-.grid1 div{
-    width: 50%;
+.grid1 div {
+  width: 50%;
 }
-.grid2{
-    display: flex;
-    flex-direction: row;
+.grid2 {
+  display: flex;
+  flex-direction: row;
 }
-.grid2 div{
-    width: 50%;
+.grid2 div {
+  width: 50%;
 }
 
 /* Menu Styles */
-#Menu{
-    background-color: #fdcf3f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 55vh;
+#Menu {
+  background-color: #fdcf3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
 }
 
 /* Footer Styles */
 
-
-.grid3, .grid4, .grid5{
-    display: flex;
-    flex-direction: row;
+.grid3,
+.grid4,
+.grid5 {
+  display: flex;
+  flex-direction: row;
 }
-.grid3 div, .grid4 div, .grid5 div{
-    width: 50%
+.grid3 div,
+.grid4 div,
+.grid5 div {
+  width: 50%;
 }
 /* .grid4{
     display: flex;
@@ -92,44 +107,46 @@ nav{
     
 } */
 
-
-
 /* Responsive styles*/
 
 /*tablet media query*/
 @media screen and (max-width: 880px) {
+  /*general styles */
 
- /*general styles */
-
-    body{
-     background-color: green;
-    }
- /* header */
-    .top{
-     display: none;  /*  this will not show but can be changed in tablet view but does in default view and now ".responExample" will show    */
-    }
-    .responExample{
-        display:block;
-    } /*COMEBACKTO*/
- /* About */
- /* Menu */
- /* Footer */
-
-} 
-
+  body {
+    /* display: flex;
+    flex-wrap: wrap; */
+    background-color: green;
+  }
+  /* header */
+  .address,
+  .icon,
+  .text {
+    width: 50%;
+  }
+  .top {
+    display: none; /*  this will not show but can be changed in tablet view but does in default view and now ".responExample" will show    */
+  }
+  .responExample {
+    display: block;
+  } /*~~COMEBACKTO*/
+  /* About */
+  /* Menu */
+  /* Footer */
+}
 
 /*mobile */
 @media screen and (max-width: 550px) {
+  /*general styles */
 
- /*general styles */
+  body {
+    /* display: flex;
+    flex-wrap: wrap; */
+    background-color: blue;
+  }
+  /* header */
 
-    body{
-        background-color: blue;
-    
-    }
- /* header */
-
- /* About */
- /* Menu */
- /* Footer */
-} 
+  /* About */
+  /* Menu */
+  /* Footer */
+}
